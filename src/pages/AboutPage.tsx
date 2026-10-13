@@ -68,15 +68,9 @@ export const AboutPage: React.FC = () => {
 
                 <div className="mt-6 pt-6 border-t border-dynace-border text-xs text-dynace-body text-left space-y-2.5">
                   <div className="flex items-center justify-between">
-                    <span className="text-dynace-muted">Primary Phone:</span>
+                    <span className="text-dynace-muted">Phone & WhatsApp:</span>
                     <a href={businessInfo.phones.primary.telHref} className="font-bold text-dynace-deep">
                       {businessInfo.phones.primary.display}
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-dynace-muted">Secondary Phone:</span>
-                    <a href={businessInfo.phones.secondary.telHref} className="font-bold text-dynace-deep">
-                      {businessInfo.phones.secondary.display}
                     </a>
                   </div>
                   <div className="flex items-center justify-between">

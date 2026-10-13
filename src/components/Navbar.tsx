@@ -57,13 +57,6 @@ export const Navbar: React.FC = () => {
               <Phone className="w-3.5 h-3.5 text-dynace-cyan" />
               <span>{businessInfo.phones.primary.display}</span>
             </a>
-            <span className="text-white/40">|</span>
-            <a
-              href={businessInfo.phones.secondary.telHref}
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              {businessInfo.phones.secondary.display}
-            </a>
           </div>
         </div>
       </div>
@@ -175,15 +168,8 @@ export const Navbar: React.FC = () => {
                 href={businessInfo.phones.primary.telHref}
                 className="flex items-center justify-between px-3 py-2.5 text-sm font-semibold text-dynace-deep bg-dynace-bg rounded-lg border border-dynace-border"
               >
-                <span>Call Primary Phone</span>
+                <span>Call Center Phone</span>
                 <span className="text-dynace-blue">{businessInfo.phones.primary.display}</span>
-              </a>
-              <a
-                href={businessInfo.phones.secondary.telHref}
-                className="flex items-center justify-between px-3 py-2.5 text-sm font-semibold text-dynace-deep bg-dynace-bg rounded-lg border border-dynace-border"
-              >
-                <span>Call Secondary Phone</span>
-                <span className="text-dynace-blue">{businessInfo.phones.secondary.display}</span>
               </a>
               <Link
                 to="/contact"

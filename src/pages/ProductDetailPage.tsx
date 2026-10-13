@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Phone, ArrowLeft, CheckCircle2, ShieldAlert, ExternalLink, Leaf, Sparkles, AlertCircle } from 'lucide-react';
 import { products } from '../data/products';
@@ -9,7 +9,6 @@ import { WhatsAppIcon } from '../components/WhatsAppIcon';
 
 export const ProductDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [selectedNumber, setSelectedNumber] = useState<'primary' | 'secondary'>('primary');
 
   const product = products.find((p) => p.slug === slug);
 
@@ -49,9 +48,7 @@ export const ProductDetailPage: React.FC = () => {
     }
   };
 
-  const currentWhatsappUrl = selectedNumber === 'primary'
-    ? businessInfo.phones.primary.whatsappUrl(product.whatsappMessage)
-    : businessInfo.phones.secondary.whatsappUrl(product.whatsappMessage);
+  const currentWhatsappUrl = businessInfo.phones.primary.whatsappUrl(product.whatsappMessage);
 
   return (
     <>
@@ -156,40 +153,6 @@ export const ProductDetailPage: React.FC = () => {
                   </span>
                 </div>
 
-                {/* Number Selector Toggle */}
-                <div>
-                  <span className="text-xs font-semibold text-dynace-deep block mb-1.5">
-                    Select Contact Number for WhatsApp:
-                  </span>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                    <button
-                      type="button"
-                      onClick={() => setSelectedNumber('primary')}
-                      className={`p-2.5 rounded-xl border text-left font-medium transition-all ${
-                        selectedNumber === 'primary'
-                          ? 'border-emerald-600 bg-emerald-50 text-emerald-900 font-semibold ring-1 ring-emerald-600'
-                          : 'border-dynace-border bg-white text-dynace-body hover:bg-gray-50'
-                      }`}
-                    >
-                      <span className="block text-[11px] text-dynace-muted">Primary (B. Rama Mohan)</span>
-                      <span>{businessInfo.phones.primary.display}</span>
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() => setSelectedNumber('secondary')}
-                      className={`p-2.5 rounded-xl border text-left font-medium transition-all ${
-                        selectedNumber === 'secondary'
-                          ? 'border-emerald-600 bg-emerald-50 text-emerald-900 font-semibold ring-1 ring-emerald-600'
-                          : 'border-dynace-border bg-white text-dynace-body hover:bg-gray-50'
-                      }`}
-                    >
-                      <span className="block text-[11px] text-dynace-muted">Secondary Line</span>
-                      <span>{businessInfo.phones.secondary.display}</span>
-                    </button>
-                  </div>
-                </div>
-
                 {/* Inquiry Buttons */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                   <a
@@ -203,11 +166,11 @@ export const ProductDetailPage: React.FC = () => {
                   </a>
 
                   <a
-                    href={selectedNumber === 'primary' ? businessInfo.phones.primary.telHref : businessInfo.phones.secondary.telHref}
+                    href={businessInfo.phones.primary.telHref}
                     className="inline-flex items-center justify-center gap-2 py-3 px-4 bg-white hover:bg-dynace-bg text-dynace-deep font-semibold text-sm rounded-xl border border-dynace-border transition-colors"
                   >
                     <Phone className="w-4 h-4 text-dynace-blue" />
-                    <span>Call Center Team</span>
+                    <span>Call: {businessInfo.phones.primary.display}</span>
                   </a>
                 </div>
 

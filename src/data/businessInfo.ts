@@ -14,20 +14,12 @@ export const businessInfo = {
   
   phones: {
     primary: {
-      label: "Primary Phone & WhatsApp",
+      label: "Phone & WhatsApp",
       display: "+91 78010 65008",
       raw: "917801065008",
       telHref: "tel:+917801065008",
       whatsappUrl: (message = "Hello, I am interested in Dynace Global products. Could you please share more details?") =>
         `https://wa.me/917801065008?text=${encodeURIComponent(message)}`
-    },
-    secondary: {
-      label: "Secondary Phone & WhatsApp",
-      display: "+91 99123 85466",
-      raw: "919912385466",
-      telHref: "tel:+919912385466",
-      whatsappUrl: (message = "Hello, I am interested in Dynace Global products. Could you please share more details?") =>
-        `https://wa.me/919912385466?text=${encodeURIComponent(message)}`
     }
   },
 

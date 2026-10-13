@@ -34,57 +34,30 @@ export const FloatingWhatsApp: React.FC = () => {
           {/* Body */}
           <div className="p-4 bg-dynace-bg space-y-3 text-xs">
             <div className="bg-white p-3 rounded-xl border border-gray-100 shadow-2xs text-dynace-body leading-relaxed">
-              👋 <strong>Namaskaram!</strong> Welcome to Dynace Health Awareness Center, Kadapa. How can we assist you with Dynace Global products today?
+              👋 <strong>Namaskaram!</strong> Welcome to Dynace Health Awareness Center, Kadapa. Connect directly with B. Rama Mohan for genuine Dynace Global product details and assistance.
             </div>
 
-            <p className="font-semibold text-dynace-deep text-[11px] uppercase tracking-wider pt-1">
-              Select Contact Number:
-            </p>
-
-            {/* Option 1: Primary Number */}
+            {/* Direct WhatsApp Contact Button */}
             <a
               href={businessInfo.phones.primary.whatsappUrl("Hello B. Rama Mohan garu, I am visiting the Dynace Health Awareness Center website and would like information on Dynace Global products in Kadapa.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-3 bg-white hover:bg-emerald-50 rounded-xl border border-gray-200 hover:border-emerald-300 transition-all shadow-2xs group"
+              className="flex items-center justify-between p-3.5 bg-white hover:bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-300 transition-all shadow-2xs group"
             >
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">
-                  <UserCheck className="w-4 h-4" />
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                  <UserCheck className="w-5 h-5" />
                 </div>
                 <div>
                   <span className="block font-bold text-dynace-deep text-xs group-hover:text-emerald-700">
                     B. Rama Mohan
                   </span>
-                  <span className="text-[11px] text-dynace-muted">
+                  <span className="text-[11px] text-emerald-700 font-semibold">
                     {businessInfo.phones.primary.display}
                   </span>
                 </div>
               </div>
-              <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-emerald-600" />
-            </a>
-
-            {/* Option 2: Secondary Number */}
-            <a
-              href={businessInfo.phones.secondary.whatsappUrl("Hello, I am interested in Dynace Global products available at Kadapa center. Please share details.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between p-3 bg-white hover:bg-emerald-50 rounded-xl border border-gray-200 hover:border-emerald-300 transition-all shadow-2xs group"
-            >
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center p-1.5 flex-shrink-0">
-                  <WhatsAppIcon className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="block font-bold text-dynace-deep text-xs group-hover:text-emerald-700">
-                    Secondary Line
-                  </span>
-                  <span className="text-[11px] text-dynace-muted">
-                    {businessInfo.phones.secondary.display}
-                  </span>
-                </div>
-              </div>
-              <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-emerald-600" />
+              <ExternalLink className="w-4 h-4 text-emerald-600 group-hover:translate-x-0.5 transition-transform" />
             </a>
           </div>
 

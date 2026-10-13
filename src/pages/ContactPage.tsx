@@ -15,7 +15,6 @@ export const ContactPage: React.FC = () => {
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [submitted, setSubmitted] = useState(false);
-  const [selectedWhatsApp, setSelectedWhatsApp] = useState<'primary' | 'secondary'>('primary');
 
   const validate = () => {
     const errs: { [key: string]: string } = {};
@@ -59,9 +58,7 @@ export const ContactPage: React.FC = () => {
 
   const handleSendViaWhatsApp = () => {
     const text = `Hello Dynace Health Awareness Center Kadapa,\n\nName: ${formData.fullName}\nPhone: ${formData.phone}${formData.email ? `\nEmail: ${formData.email}` : ''}\n\nMessage:\n${formData.message}`;
-    const targetUrl = selectedWhatsApp === 'primary'
-      ? businessInfo.phones.primary.whatsappUrl(text)
-      : businessInfo.phones.secondary.whatsappUrl(text);
+    const targetUrl = businessInfo.phones.primary.whatsappUrl(text);
     
     window.open(targetUrl, '_blank', 'noopener,noreferrer');
   };
@@ -70,7 +67,7 @@ export const ContactPage: React.FC = () => {
     <>
       <SEOHead
         title="Contact Dynace Health Awareness Center | Kadapa, Andhra Pradesh"
-        description="Contact Dynace Health Awareness Center in Kadapa. Call +91 78010 65008 or +91 99123 85466. Visit our center at Rajiv Park, Maruthi Nagar, Kadapa - 516001."
+        description="Contact Dynace Health Awareness Center in Kadapa. Call or WhatsApp +91 78010 65008. Visit our center at Rajiv Park, Maruthi Nagar, Kadapa - 516001."
         canonicalPath="/contact"
       />
 
@@ -120,7 +117,7 @@ export const ContactPage: React.FC = () => {
 
                 <div className="space-y-3 text-xs">
                   <div>
-                    <span className="text-dynace-muted block">Primary Phone & WhatsApp:</span>
+                    <span className="text-dynace-muted block">Direct Phone & WhatsApp:</span>
                     <div className="flex items-center justify-between mt-1">
                       <a
                         href={businessInfo.phones.primary.telHref}
@@ -130,27 +127,6 @@ export const ContactPage: React.FC = () => {
                       </a>
                       <a
                         href={businessInfo.phones.primary.whatsappUrl()}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs hover:bg-emerald-100 transition-colors"
-                      >
-                        <WhatsAppIcon className="w-3.5 h-3.5" />
-                        <span>Chat</span>
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="pt-2 border-t border-gray-100">
-                    <span className="text-dynace-muted block">Secondary Phone & WhatsApp:</span>
-                    <div className="flex items-center justify-between mt-1">
-                      <a
-                        href={businessInfo.phones.secondary.telHref}
-                        className="font-bold text-dynace-deep hover:text-dynace-blue text-sm"
-                      >
-                        {businessInfo.phones.secondary.display}
-                      </a>
-                      <a
-                        href={businessInfo.phones.secondary.whatsappUrl()}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs hover:bg-emerald-100 transition-colors"
@@ -349,34 +325,7 @@ export const ContactPage: React.FC = () => {
                     )}
                   </div>
 
-                  {/* Contact Number Preference */}
-                  <div className="pt-2">
-                    <span className="block font-semibold text-dynace-deep text-xs mb-1.5">
-                      Prefer WhatsApp Dispatch To:
-                    </span>
-                    <div className="grid grid-cols-2 gap-2 text-xs">
-                      <label className="flex items-center gap-2 p-2 rounded-lg border border-dynace-border cursor-pointer hover:bg-dynace-bg">
-                        <input
-                          type="radio"
-                          name="waChoice"
-                          checked={selectedWhatsApp === 'primary'}
-                          onChange={() => setSelectedWhatsApp('primary')}
-                          className="text-dynace-blue"
-                        />
-                        <span>Primary (+91 78010 65008)</span>
-                      </label>
-                      <label className="flex items-center gap-2 p-2 rounded-lg border border-dynace-border cursor-pointer hover:bg-dynace-bg">
-                        <input
-                          type="radio"
-                          name="waChoice"
-                          checked={selectedWhatsApp === 'secondary'}
-                          onChange={() => setSelectedWhatsApp('secondary')}
-                          className="text-dynace-blue"
-                        />
-                        <span>Secondary (+91 99123 85466)</span>
-                      </label>
-                    </div>
-                  </div>
+
 
                   {/* Privacy Notice */}
                   <p className="text-[11px] text-dynace-muted pt-2 leading-relaxed">

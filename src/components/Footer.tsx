@@ -116,14 +116,9 @@ export const Footer: React.FC = () => {
 
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-dynace-cyan flex-shrink-0" />
-                <div className="flex flex-col">
-                  <a href={businessInfo.phones.primary.telHref} className="hover:text-white">
-                    {businessInfo.phones.primary.display}
-                  </a>
-                  <a href={businessInfo.phones.secondary.telHref} className="text-slate-400 hover:text-white">
-                    {businessInfo.phones.secondary.display}
-                  </a>
-                </div>
+                <a href={businessInfo.phones.primary.telHref} className="hover:text-white font-medium">
+                  {businessInfo.phones.primary.display}
+                </a>
               </div>
 
               <div className="flex items-center gap-2.5">

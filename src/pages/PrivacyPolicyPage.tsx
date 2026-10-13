@@ -96,7 +96,7 @@ export const PrivacyPolicyPage: React.FC = () => {
                 <p><strong>Dynace Health Awareness Center</strong></p>
                 <p>Representative: {businessInfo.representative}</p>
                 <p>Address: {businessInfo.address.full}</p>
-                <p>Phone: {businessInfo.phones.primary.display} / {businessInfo.phones.secondary.display}</p>
+                <p>Phone: {businessInfo.phones.primary.display}</p>
               </div>
             </section>
           </div>

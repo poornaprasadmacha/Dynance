@@ -249,16 +249,10 @@ export const HomePage: React.FC = () => {
                 </div>
 
                 <div className="space-y-2.5 text-xs text-dynace-body pt-2 border-t border-dynace-border">
-                  <div className="flex items-center justify-between py-1 border-b border-gray-100">
-                    <span className="text-dynace-muted">Primary Contact:</span>
+                  <div className="flex items-center justify-between py-1">
+                    <span className="text-dynace-muted">Direct Phone & WhatsApp:</span>
                     <a href={businessInfo.phones.primary.telHref} className="font-semibold text-dynace-deep">
                       {businessInfo.phones.primary.display}
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-between py-1">
-                    <span className="text-dynace-muted">Secondary Contact:</span>
-                    <a href={businessInfo.phones.secondary.telHref} className="font-semibold text-dynace-deep">
-                      {businessInfo.phones.secondary.display}
                     </a>
                   </div>
                 </div>

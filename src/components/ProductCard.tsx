@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, ChevronDown } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Product } from '../data/products';
 import { businessInfo } from '../data/businessInfo';
 import { WhatsAppIcon } from './WhatsAppIcon';
@@ -10,8 +10,6 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const [showNumberChoice, setShowNumberChoice] = useState(false);
-
   return (
     <div className="bg-white rounded-xl border border-dynace-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full overflow-hidden group">
       {/* Product Image Container */}
@@ -67,44 +65,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </Link>
 
           {/* WhatsApp Direct Inquire */}
-          <div className="relative">
-            <button
-              onClick={() => setShowNumberChoice(!showNumberChoice)}
-              type="button"
-              className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm rounded-lg shadow-2xs transition-colors"
-            >
-              <WhatsAppIcon className="w-4 h-4" />
-              <span>Ask About This Product</span>
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform ${showNumberChoice ? 'rotate-180' : ''}`} />
-            </button>
-
-            {/* Dropdown to choose between Primary or Secondary contact */}
-            {showNumberChoice && (
-              <div className="absolute bottom-full left-0 right-0 mb-1 bg-white border border-dynace-border rounded-lg shadow-lg p-2 z-20 text-xs">
-                <p className="font-semibold text-dynace-deep px-2 py-1 border-b border-gray-100 mb-1">
-                  Connect on WhatsApp:
-                </p>
-                <a
-                  href={businessInfo.phones.primary.whatsappUrl(product.whatsappMessage)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between p-2 hover:bg-dynace-bg rounded text-dynace-body hover:text-dynace-blue transition-colors"
-                >
-                  <span className="font-medium">Primary: {businessInfo.phones.primary.display}</span>
-                  <span className="text-[10px] bg-green-100 text-green-700 px-1.5 py-0.5 rounded font-medium">B. Rama Mohan</span>
-                </a>
-                <a
-                  href={businessInfo.phones.secondary.whatsappUrl(product.whatsappMessage)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between p-2 hover:bg-dynace-bg rounded text-dynace-body hover:text-dynace-blue transition-colors"
-                >
-                  <span className="font-medium">Secondary: {businessInfo.phones.secondary.display}</span>
-                  <span className="text-[10px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium">Assistance</span>
-                </a>
-              </div>
-            )}
-          </div>
+          <a
+            href={businessInfo.phones.primary.whatsappUrl(product.whatsappMessage)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm rounded-lg shadow-2xs transition-colors"
+          >
+            <WhatsAppIcon className="w-4 h-4" />
+            <span>Ask About This Product</span>
+          </a>
         </div>
       </div>
     </div>

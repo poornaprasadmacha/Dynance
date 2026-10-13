@@ -10,8 +10,7 @@ A complete, premium, minimalist, and SEO-optimized business website for **Dynace
 - **Brand**: Dynace Global
 - **Business Representative**: B. Rama Mohan
 - **Designation**: Rising Ace of Dynace Global
-- **Primary Phone & WhatsApp**: +91 78010 65008
-- **Secondary Phone & WhatsApp**: +91 99123 85466
+- **Phone & WhatsApp**: +91 78010 65008
 - **Address**: #1-308, 1st Floor, Rajiv Park, Road No. 05, Maruthi Nagar, SP Bunglow Opp. Road, Kadapa, Andhra Pradesh - 516001, India.
 - **Google Maps Plus Code**: `FR7G+QJ2`, Kadapa, Andhra Pradesh
 - **GPS Coordinates**: Latitude: `14.464404`, Longitude: `78.824492`
@@ -118,7 +117,7 @@ npm run preview
 3. Category: **Health and Beauty Shop** or **Wellness Center**.
 4. Set exact address: `#1-308, 1st Floor, Rajiv Park, Road No. 05, Maruthi Nagar, SP Bunglow Opp. Road, Kadapa, Andhra Pradesh - 516001`.
 5. Enter Plus Code: `FR7G+QJ2, Kadapa`.
-6. Add Primary Phone: `+91 78010 65008` and Secondary Phone: `+91 99123 85466`.
+6. Add Phone & WhatsApp: `+91 78010 65008`.
 7. Link Website URL: `https://dynacekadapa.in`.
 8. Complete verification (video verification or postcard).
 
