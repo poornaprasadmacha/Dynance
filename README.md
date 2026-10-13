@@ -12,9 +12,8 @@ A complete, premium, minimalist, and SEO-optimized business website for **Dynace
 - **Designation**: Rising Ace of Dynace Global
 - **Phone & WhatsApp**: +91 78010 65008
 - **Address**: #1-308, 1st Floor, Rajiv Park, Road No. 05, Maruthi Nagar, SP Bunglow Opp. Road, Kadapa, Andhra Pradesh - 516001, India.
-- **Google Maps Plus Code**: `FR7G+QJ2`, Kadapa, Andhra Pradesh
-- **GPS Coordinates**: Latitude: `14.464404`, Longitude: `78.824492`
-- **Google Maps Listing**: [Dynance Health Awareness Center on Google Maps](https://www.google.com/maps/place/Dynance+Health+Awareness+Center/@14.4644043,78.8244923,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb373dfb9ea6e11:0xfffb7aecc20327a!8m2!3d14.4644043!4d78.8244923)
+- **GPS Coordinates**: Latitude: `14.4644003`, Longitude: `78.8264743`
+- **Google Maps Listing**: [Dynance Health Awareness Center on Google Maps](https://maps.app.goo.gl/LBXzmskFWat3hzY48)
 - **Official Product Reference**: [https://m.dynaceglobal.com/ramamohan/home](https://m.dynaceglobal.com/ramamohan/home)
 
 ---
@@ -116,9 +115,8 @@ npm run preview
 2. Create or claim **Dynace Health Awareness Center**.
 3. Category: **Health and Beauty Shop** or **Wellness Center**.
 4. Set exact address: `#1-308, 1st Floor, Rajiv Park, Road No. 05, Maruthi Nagar, SP Bunglow Opp. Road, Kadapa, Andhra Pradesh - 516001`.
-5. Enter Plus Code: `FR7G+QJ2, Kadapa`.
-6. Add Phone & WhatsApp: `+91 78010 65008`.
-7. Link Website URL: `https://dynacekadapa.in`.
+5. Add Phone & WhatsApp: `+91 78010 65008`.
+6. Link Website URL: `https://dynacekadapa.in`.
 8. Complete verification (video verification or postcard).
 
 ---

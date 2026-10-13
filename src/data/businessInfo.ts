@@ -32,12 +32,12 @@ export const businessInfo = {
     pincode: "516001",
     country: "India",
     coordinates: {
-      lat: 14.464404281736462,
-      lng: 78.82449227223725
+      lat: 14.4644003,
+      lng: 78.8264743
     },
     embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4079.6605985833553!2d78.82449227223725!3d14.464404281736462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb373dfb9ea6e11%3A0xfffb7aecc20327a!2sDynance%20Health%20Awareness%20Center!5e1!3m2!1sen!2sin!4v1791902596053!5m2!1sen!2sin",
-    directionsUrl: "https://www.google.com/maps/dir//Dynance+Health+Awareness+Center/@14.4644043,78.8244923",
-    mapViewUrl: "https://www.google.com/maps/place/Dynance+Health+Awareness+Center/@14.4644043,78.8244923,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb373dfb9ea6e11:0xfffb7aecc20327a!8m2!3d14.4644043!4d78.8244923"
+    directionsUrl: "https://maps.app.goo.gl/LBXzmskFWat3hzY48",
+    mapViewUrl: "https://maps.app.goo.gl/LBXzmskFWat3hzY48"
   },
 
   hours: "Monday - Saturday: 9:30 AM - 8:00 PM | Sunday: Closed",
